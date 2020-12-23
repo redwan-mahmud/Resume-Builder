@@ -1,6 +1,6 @@
 import React from 'react'
 import uniqid from 'uniqid'
-
+import SkillDisplay from './SkillDisplay'
 class Skills extends React.Component{
     constructor(props){
         super(props)
@@ -36,12 +36,17 @@ class Skills extends React.Component{
 
     render(){
 
+        const displaySkill = this.state.skills.map((skill)=>{
+            return <SkillDisplay skill = {skill} key = {uniqid()}/>
+        })
+
         return(
             <div>
                 <h2>Skills</h2>
                 
                 <div>
                     <p className="ui grey label">Grey</p>
+                    {displaySkill}
                 </div>
                 {this.state.activeForm?(
                     <form onSubmit ={this.handleSubmit}>

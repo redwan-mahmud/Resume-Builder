@@ -2,6 +2,7 @@ import React from 'react';
 import Name from './Name'
 import Address from './Address'
 import Education from './Education'
+import Skills from './Skills'
 class Page extends React.Component {
     render() {
         return (
@@ -19,7 +20,7 @@ class Page extends React.Component {
             <div className = "ui divider"></div>
             <div className = "ui segment"><p>Work Experience</p></div>
             <div className = "ui divider"></div>
-            <div className = "ui segment">Skills</div>
+            <div className = "ui segment"><Skills/></div>
             </div>
 
         )

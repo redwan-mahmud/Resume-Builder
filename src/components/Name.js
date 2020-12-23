@@ -24,7 +24,7 @@ class Name extends React.Component {
     }
     render(){
     return (
-        <div className = "ui clearing segment">
+        <div >
             {this.state.nameEdit ? (
                             <NameForm onUpdate={this.editName} />
                         ) : (
